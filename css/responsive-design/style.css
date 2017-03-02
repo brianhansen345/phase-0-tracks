@@ -14,9 +14,22 @@ cite {
   padding-left: 0px;
 }
 
-/* you're welcome to edit the
-image, figure, and figcaption CSS if you'd like, 
-but it's optional! */
+#external-links {
+  width: 200px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+main {
+  width: 756px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+body {
+  width: 960px;
+}
+
 img {
   width: 100%;
 }
