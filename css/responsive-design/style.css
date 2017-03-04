@@ -9,6 +9,12 @@ cite {
   margin-top: 10px;
 }
 
+#external-links {
+  width: 200px;
+  display: inline-block;
+  vertical-align: top;
+}
+
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
@@ -17,6 +23,17 @@ cite {
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like, 
 but it's optional! */
+
+body {
+  max-width: 960px;
+}
+
+main {
+  width: 756px;
+  display: center;
+  vertical-align: middle;
+}
+
 img {
   width: 100%;
 }
@@ -30,3 +47,13 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+@media screen and (max-width: 980px) {
+  img {
+    width: 30%;
+  } 
+
+@media screen and (max-width: 980px) {
+  main {
+    font-size: 0.75em;
+  } 
