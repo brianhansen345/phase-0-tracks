@@ -1,0 +1,31 @@
+.column-1 h2, .column-2 h2 {
+  color: pink;
+}
+
+body {
+  background: linear-gradient(to bottom right, #005C97, #363795);
+}
+
+a:hover {
+  color: purple;
+}
+
+a {
+  color: green;
+}
+
+header,
+footer {
+  font-family: Helvetica;
+}
+
+.column-1, .column-2 {
+  display: inline-block;
+  vertical-align: top;
+  width: 49.3%;
+  font-family: Arial;
+}
+
+footer {
+  margin-top: 10px;
+}
