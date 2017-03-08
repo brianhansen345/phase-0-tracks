@@ -1,0 +1,7 @@
+- Once near elevator, move forward into elevator until wall is reached (Wall A).
+- Until floor buttons have been located, perform the following process:
+	- Scan wall to determine whether the floor buttons are on Wall A
+	- If floor buttons are not present, turn left and move forward until new wall is reached (Wall B).
+	- Repeat first two steps (replacing Wall B with Wall C and then Wall D)
+- Identify the floor button that corresponds with the floor you want to go to and push button
+- Once at desired floor with elevator door open, proceed through door.
