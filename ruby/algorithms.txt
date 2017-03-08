@@ -1,3 +1,5 @@
+Robot Elevator Algorithm
+
 - Once near elevator, move forward into elevator until wall is reached (Wall A).
 - Until floor buttons have been located, perform the following process:
 	- Scan wall to determine whether the floor buttons are on Wall A
@@ -5,3 +7,14 @@
 	- Repeat first two steps (replacing Wall B with Wall C and then Wall D)
 - Identify the floor button that corresponds with the floor you want to go to and push button
 - Once at desired floor with elevator door open, proceed through door.
+
+Teeth-brushing Algorithm
+
+- Use left hand to grab toothbrush
+- Use right hand to grab toothpaste
+- Use right hand to squeeze 0.5 oz of toothpaste across the tops of the toothbrush's bristles
+- Use right hand to put toothpaste back into cabinet
+- Use left hand to run bristles of toothbrush across teeth. Divide teeth into 12 parts: top/bottom row, external/interal sides, left/right/front. Run bristles across teeth 8 times before moving on.
+- Spit into sink
+- Use left hand to put toothbrush back into cabinet
+- Congratulate oneself on a job well done
