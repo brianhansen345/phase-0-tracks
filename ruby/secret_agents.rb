@@ -43,7 +43,7 @@ if string == "encrypt"
 elsif string == "decrypt"
   puts decrypt(password)
 else 
-  puts "Does not compute; please enter encrypt or decrypt."
+  p "Does not compute; please enter encrypt or decrypt."
 end
 
 # decrypt("tipsu")
