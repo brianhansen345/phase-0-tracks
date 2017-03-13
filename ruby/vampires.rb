@@ -19,6 +19,31 @@ until employees == 0
 	allergies = gets.chomp.downcase
 	end
 
+age_year_diff = false
+age_year_match = true
+garlic_bread_no = false
+garlic_bread_yes = true
+health_insurance_no = false
+health_insurance_yes = true
+vampire_name = false
+human_name = true
+result = "Results inconclusive."
+
+if (age != (2017 - birth_year))
+	age_year_diff = true
+	age_year_match = false
+end
+
+if garlic_bread == "n" || garlic_bread == "no"
+	garlic_bread_no = true
+	garlic_bread_yes = false
+end
+
+if health_insurance == "n" || health_insurance =="no"
+	health_insurance_no = true
+	health_insurance_yes = false
+end
+
 if age_year_match && garlic_bread_yes && health_insurance_yes && human_name
 	result = "Probably not a vampire."
 elsif age_year_match && garlic_bread_yes && health_insurance_no && human_name
