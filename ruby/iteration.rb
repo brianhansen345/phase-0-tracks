@@ -14,10 +14,17 @@ array.each do |color|
 end
 p array
 
+puts "After .map call for array:"
+new_array = array.map do |color|
+	puts color
+	color = color + "i"
+end
+p new_array
+
 puts "After .map! call for array:"
-array.map! do |letter|
-	letter = letter + "i"
-	puts letter
+array.map! do |color|
+	color = color + "i"
+	puts color
 end
 
 puts "After .each call for hash:"
@@ -25,15 +32,32 @@ hash.each do |actor, role|
 	puts "#{actor} is best known for his role as #{role}"
 end
 
+puts "After .map call for hash:"
+new_hash = hash.map do |actor, role|
+	puts "#{actor} is best known for his role as #{role}"
+	actor = actor.upcase
+end
+p new_hash
 
-A method that iterates through the items, deleting any that meet a certain condition (for example, 
-	deleting any numbers that are less than 5).
+array2 = [1, 2, 10]
+hash2 = {
+	"A" => 1,
+	"B" => 2,
+	"C" => 10
+}
 
+1
+array2.delete_if {|x| x < 5}
+hash2.delete_if { |key, value| value < 5}
 
-A method that filters a data structure for only items that do satisfy a certain condition 
-	(for example, keeping any numbers that are less than 5).
-A different method that filters a data structure for only items satisfying a certain condition 
--- Ruby offers several options!
-A method that will remove items from a data structure until the condition in the block 
-evaluates to false, then stops (you may not find a perfectly working option for the hash, 
-	and that's okay).
+2
+array2.keep_if {|x| x < 5}
+hash2.keep_if {|key, value| value < 5}
+
+3
+p array2.drop(2)
+p hash2.drop(2)
+
+4
+p array2.take_while { |i| i < 10}
+p hash2.take_while { |letter, number| number < 10}
