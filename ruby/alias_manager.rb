@@ -1,22 +1,78 @@
+# I WASN'T ABLE TO FINISH THIS ASSIGNMENT IN TIME. I'M GOING TO SPEND AS MUCH
+# TIME AS NECESSARY THIS COMING WEEK TO GO OVER THIS ASSIGNMENT AND MAKE SURE
+# I UNDERSTAND ALL THE CONCEPTS
+
 # PSEUDOCODE
 # Input real name
 # Swap First and Last Name
 # All vowels become the next vowel in 'aeiou'
 # All consonants become the next consonant
 
-puts "Please enter your name"
+# names_hash = {
+# 	:Real1 => "Spy1",
+# 	:Real2 => "Spy2"
+# }
+
+# names_hash = {
+# }
+
+# real_name = "Real"
+# spy_name = "Spy"
+
+# names_hash[:Real] = spy_name
+
+# p names_hash
+
+
+
+# Create the hash:
+
+# hash = {:item1 => 1}
+# Add a new item to it:
+
+# hash[:item2] = 2
+
+
+
+
+puts "Please enter your first and last name."
 name = gets.chomp
 
-# Swap First and Last Name
+# # Change Name
 
-split_name = name.split(' ')
-split_name.map! do
-	reversed_name = split_name[1] + " " + split_name[0]
+changed_name = name.chars.map!{|letter| letter.next.swapcase}.join('')
+# names_hash << changed_name
+
+p "Your spy name is #{changed_name}"
+
+p "Enter another name if you'd like (otherwise please enter 'quit'"
+name = gets.chomp
+until input == "quit"
+	changed_name = name.chars.map!{|letter| letter.next.swapcase}.join('')
+	p "Your spy name is #{changed_name}"
 end
 
-p reverse_name
+# names_hash.each do |real_name, spy_name|
+#   puts "#{real_name}'s spy name is #{spy_name}"
+# end
 
 
+
+# split_name = [
+# 	"Brian",
+# 	"Hansen"
+# ]
+# p split_name[0] = "Brian"
+# p split_name[1] = "Hansen"
+
+
+# reversed_name = split_name.map.index do |name, i|
+# 	name[i] = name[i + 1]
+# end
+# p reversed_name
+
+
+# name.chars.map!{|letter| letter.next}.join('')
 
 # "hello world".chars.map!{|letter| letter.next}.join('')
 
