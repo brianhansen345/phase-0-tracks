@@ -32,15 +32,15 @@ class Santa
 
 end
 
-jimbo = Santa.new("male", "white")
-jimbo.speak
-jimbo.eat_milk_and_cookies("Sugar Cookie")
-jimbo.celebrate_birthday
-jimbo.get_mad_at("Vixen")
-jimbo.gender="all genders, simultaneously"
-p jimbo
-p jimbo.age
-p jimbo.ethnicity
+# jimbo = Santa.new("male", "white")
+# jimbo.speak
+# jimbo.eat_milk_and_cookies("Sugar Cookie")
+# jimbo.celebrate_birthday
+# jimbo.get_mad_at("Vixen")
+# jimbo.gender="all genders, simultaneously"
+# p jimbo
+# p jimbo.age
+# p jimbo.ethnicity
 
 # santas = []
 # example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
@@ -51,7 +51,16 @@ p jimbo.ethnicity
 
 # p santas
 
-
+santas = []
+example_genders = ["agender", "female", "bigender", "male", "gender fluid", "N/A", "Gender 16", "Sex? Uh...yes, please!", "transgender (pre-op)", "transgender (post-op)", "non-gender"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "yellow", "brown", "Sub-Saharan African", "Poop", "Race is a social construct", "Mulato", "Quadroon", "mongrel", "mutt"]
+10000000.times do
+	santa = Santa.new(example_genders[rand(example_genders.length)], example_ethnicities[rand(example_ethnicities.length)])
+	rand(140).times do
+		santa.celebrate_birthday
+		end
+	p santa
+end
 
 
 
