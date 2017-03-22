@@ -52,22 +52,26 @@ class Robot
 
 end
 
-
-
-
-
-
-
 # Use a loop to make 50 instances of your class.
 # Modify your loop so that it stores all of the instances in a data
 # structure.
+
+robots = []
+
+50.times do
+	robi = Robot.new
+	robots.push(robi)
+end
+
 # Iterate over that data structure using .each and call the instance
-# methods you wrote on each instance. So if you wrote a Gymnast class,
-# this is where you'd call .flip and .jump on each of your instances of
-# Gymnast.
+# methods you wrote on each instance.
 
+robots.each {|robot| robot.laser(1)}
+robots.each {|robot| robot.refuel("nitro")}
 
-
-
+# robots.each do |robot|
+# 	robot.laser(1)
+#   robot.refuel("nitro")
+# end
 
 
