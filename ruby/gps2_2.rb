@@ -34,14 +34,24 @@ def remove_item(list, item)
 end 
 
 # Method to update the quantity of an item
-# input:
-# steps:
-# output:
+# input: list, item, quantity
+# steps: update quantity
+# output: the hash has updated quantity
+
+def update_quantity(list, item, quantity)
+	list[item] = quantity
+end
 
 # Method to print a list and make it look pretty
-# input:
-# steps:
-# output:
+# input: list
+# steps: iterate through list and present the list in an easy to read manner
+# output: an easy to read list
+
+def print_pretty_list(list)
+	list.each do |item, quantity|
+		puts "#{item} - #{quantity}"
+	end
+end
 
 # DRIVER CODE
 
@@ -53,6 +63,11 @@ p grocery_list
 remove_item(grocery_list, "ice cream")
 
 p grocery_list
+
+update_quantity(grocery_list, "pizza", 5)
+p grocery_list
+
+print_pretty_list(grocery_list)
 
 
 
