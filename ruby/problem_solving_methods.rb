@@ -1,42 +1,42 @@
-# RELEASE 0
+RELEASE 0
 
-# array1 = [2, 10, 15, 89]
+array1 = [2, 10, 15, 89]
 
-# def search_for_index (array_name, integer)
-# 	index = 0
-# 	item_index = nil
+def search_for_index (array_name, integer)
+	index = 0
+	item_index = nil
 
-# array_name.each do |number|
-# 	if number == integer
-# 		item_index = index
-# 	end
-# 	index += 1
-# 	end
-# 	item_index
-# end
+array_name.each do |number|
+	if number == integer
+		item_index = index
+	end
+	index += 1
+	end
+	item_index
+end
 
-# p search_for_index(array1, 3)
+p search_for_index(array1, 3)
 
-# RELEASE 1
+RELEASE 1
 
-# def fib (number)
-# 	array = []
-# 	while array.length < number
-# 		if array.length == 0
-# 			array << 0
-# 		elsif array.length == 1
-# 			array << 1
-# 		else
-# 			array << (array[-2] + array[-1])
-# 		end
-# 	end
-# 	array
-# end
+def fib (number)
+	array = []
+	while array.length < number
+		if array.length == 0
+			array << 0
+		elsif array.length == 1
+			array << 1
+		else
+			array << (array[-2] + array[-1])
+		end
+	end
+	array
+end
 
-# p fib(6)
-# p fib(100)
+p fib(6)
+p fib(100)
 
-# RELEASE 2
+RELEASE 2
 
 array2 = [4, 6, 99, 1000, 50, 34, 2, 17]
 

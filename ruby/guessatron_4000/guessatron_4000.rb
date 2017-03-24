@@ -8,33 +8,47 @@
 # User gets a congratulatory message if they win and a taunting message if
 # they lose.
 
-secret_word = "quick"
-
 class Guessatron_4000
 	attr_accessor :guess_count, :is_over, :is_over_won, :is_over_lost, :secret_word
 
 	def initialize
 		@secret_word = "_____"
-     	@guess_count = 1
+     	@guess_count = 0
      	@is_over = false
      	@is_over_won = false
      	@is_over_lost = false
 	end
 
 	def check_word(guess)
-		@guess_count += 1
+		guesses = []
+		guesses << guess
+		if guesses.include? 
+"repeated guesses don't count against user"
+
+			@guess_count += 1
 		secret_word = "quick"
-		if secret_word.include?(guess)
+		if @guess_count <= secret_word.length && secret_word.include?(guess)
 			@secret_word.slice!(secret_word.index(guess))
 			@secret_word.insert((secret_word.index(guess)), guess)
-		elsif @guess_count == @secret_word.length
+			if @guess_count == secret_word.length && @secret_word == secret_word
+				@is_over = true
+     	  		@is_over_lost = false
+     	    	@is_over_won = true
+     	    elsif @guess_count == secret_word.length && @secret_word != secret_word
+     	    	@is_over = true
+     	  		@is_over_lost = true
+     	    	@is_over_won = false
+     	    else
+     	    	@secret_word = @secret_word
+     	    end
+		elsif @guess_count == secret_word.length && (@secret_word == secret_word)
 			@is_over = true
-     	  	@is_over_lost = true
-     	    @is_over_won = false
-     	 elsif @secret_word == "quick"
+     	  	@is_over_lost = false
+     	    @is_over_won = true
+     	 elsif (@guess_count == secret_word.length) && (@secret_word != secret_word)
      	 	@is_over = true
-     	 	@is_over_lost = false
-     	 	@is_over_won = true
+     	 	@is_over_lost = true
+     	 	@is_over_won = false
 		else
 			@secret_word = @secret_word
 		end
@@ -43,9 +57,9 @@ class Guessatron_4000
 end
 
 # user interface
-
+secret_word = "quick"
 game = Guessatron_4000.new
-p "Welcome to the Guessatron_4000."
+puts "Welcome to the Guessatron_4000."
 
 while !game.is_over
 	puts "The secret word is #{game.secret_word}. #{secret_word.length - game.guess_count} guesses left. Guess a letter."
