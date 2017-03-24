@@ -12,21 +12,22 @@ class Guessatron_4000
 	attr_accessor :guess_count, :is_over, :is_over_won, :is_over_lost, :secret_word
 
 	def initialize
-		@secret_word = "_____"
+		@secret_word = "____"
      	@guess_count = 0
      	@is_over = false
      	@is_over_won = false
      	@is_over_lost = false
+     	@guesses = []
 	end
 
 	def check_word(guess)
-		guesses = []
-		guesses << guess
-		if guesses.include? 
-"repeated guesses don't count against user"
-
+		if @guesses.include?(guess)
+			@guess_count = @guess_count
+		else
 			@guess_count += 1
-		secret_word = "quick"
+		end
+		@guesses << guess
+		secret_word = "poop"
 		if @guess_count <= secret_word.length && secret_word.include?(guess)
 			@secret_word.slice!(secret_word.index(guess))
 			@secret_word.insert((secret_word.index(guess)), guess)
@@ -57,7 +58,7 @@ class Guessatron_4000
 end
 
 # user interface
-secret_word = "quick"
+secret_word = "poop"
 game = Guessatron_4000.new
 puts "Welcome to the Guessatron_4000."
 
