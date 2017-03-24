@@ -12,7 +12,7 @@ class Guessatron_4000
 	attr_accessor :guess_count, :is_over, :is_over_won, :is_over_lost, :secret_word
 
 	def initialize
-		@secret_word = "____"
+		@secret_word = "_____"
      	@guess_count = 0
      	@is_over = false
      	@is_over_won = false
@@ -27,7 +27,7 @@ class Guessatron_4000
 			@guess_count += 1
 		end
 		@guesses << guess
-		secret_word = "poop"
+		secret_word = "quick"
 		if @guess_count <= secret_word.length && secret_word.include?(guess)
 			@secret_word.slice!(secret_word.index(guess))
 			@secret_word.insert((secret_word.index(guess)), guess)
@@ -58,7 +58,7 @@ class Guessatron_4000
 end
 
 # user interface
-secret_word = "poop"
+secret_word = "quick"
 game = Guessatron_4000.new
 puts "Welcome to the Guessatron_4000."
 
