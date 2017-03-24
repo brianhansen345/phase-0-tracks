@@ -70,5 +70,20 @@ p grocery_list
 print_pretty_list(grocery_list)
 
 
+# What did you learn about pseudocode from working on this challenge?
+# 	I learned that can be very helpful in conceptualizing what you need to do for a coding challenge.
+#   It helps to formulate out in plain English what you need to do and then tackle each part individually
+#   when making the actual driver code. 
+# What are the tradeoffs of using arrays and hashes for this challenge?
+#   Arrays are simpler to use but can't store as much information as a hash.
+# What does a method return?
+#   A method returns the completed commands of the code within the method. It only presents the results
+#   of the method to the interface if instructed to do so.
+# What kind of things can you pass into methods as arguments?
+#   Essentially anything. Variables, integers, strings, booleans, arrays, and hashes.
+# How can you pass information between methods?
+#  By placing it between parentheses to the rigth of the method name.
+# What concepts were solidified in this challenge, and what concepts are still confusing?
+#  Using methods to carry out tasks was solidified, but invoking data structures remains a bit confusing.
 
 
