@@ -20,8 +20,8 @@ class TodoList
 		@chores.delete(chore)
 	end
 
-	def get_item(integer)
-		@chores[integer]
+	def get_item(number)
+		@chores[number]
 	end
 
 end
