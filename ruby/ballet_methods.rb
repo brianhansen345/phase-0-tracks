@@ -1,7 +1,9 @@
-require relative 'ballet_methods'
+class Dancer
 	attr_accessor :name, :age
 
-def initialize(name, age)
-	@name = name
-	@age = age
+	def initialize(name, age)
+		@name = name
+		@age = age
+	end
+
 end
