@@ -12,7 +12,7 @@ class Guessatron_4000
 	attr_accessor :guess_count, :is_over, :is_over_won, :is_over_lost, :secret_word
 
 	def initialize
-		@secret_word = "_____"
+		@secret_word = "_" * game.secret_word.length
      	@guess_count = 0
      	@is_over = false
      	@is_over_won = false
@@ -27,7 +27,7 @@ class Guessatron_4000
 			@guess_count += 1
 		end
 		@guesses << guess
-		secret_word = "quick"
+		# secret_word = "quick" DOES THIS NEED TO BE THERE???
 		if @guess_count <= secret_word.length && secret_word.include?(guess)
 			@secret_word.slice!(secret_word.index(guess))
 			@secret_word.insert((secret_word.index(guess)), guess)
@@ -58,9 +58,13 @@ class Guessatron_4000
 end
 
 # user interface
-secret_word = "quick"
+
 game = Guessatron_4000.new
-puts "Welcome to the Guessatron_4000."
+
+puts "User1, enter a secret word."
+secret_word = gets.chomp
+@secret_word = "_" * game.secret_word.length
+puts "User2, welcome to the Guessatron_4000."
 
 while !game.is_over
 	puts "The secret word is #{game.secret_word}. #{secret_word.length - game.guess_count} guesses left. Guess a letter."
