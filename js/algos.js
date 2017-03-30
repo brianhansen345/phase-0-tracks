@@ -4,16 +4,16 @@
 // current 'longest' element. If it is, re-assign the var 'longest' to that element. After all elements
 // have been cycled through, print the longest element.
 
-// var returnLongest = function (array) {
-// 	var longest = array[0];
+var returnLongest = function (array) {
+	var longest = array[0];
 
-// 	for (var i=0; i<array.length; i++) {
-// 		if (array[i].length > longest.length) {
-// 			longest = array[i];
-// 		}
-// 	}
-// 	console.log(longest);
-// }
+	for (var i=0; i<array.length; i++) {
+		if (array[i].length > longest.length) {
+			longest = array[i];
+		}
+	}
+	console.log(longest);
+}
 
 // PSEUDOCODE
 // Function will input two objects. Function will loop through each key-value pair for both objects. If
@@ -118,8 +118,6 @@ var compareArraysForMatchingIndices = function(array1, array2) {
 
 var a = compareArraysForMatchingIndices(keyMatches, valueMatches);
 console.log(a);
-// RETURNS TRUE BECAUSE THERE IS AT LEAST ONE MATCH
-
 
 // phrases = ["long phrase", "longest phrase", "longer phrase"]
 // returnLongest(phrases);
@@ -135,7 +133,7 @@ function getRandomInt(min, max) {
 
 alphabet = "abcdefghijklmnopqrstuvqxyz"
 
-var createRandomWord = function (integer) {
+var createRandomWord = function () {
 	var integer = (getRandomInt(1, 12));
 	var randomWord = "";
 
@@ -145,40 +143,23 @@ var createRandomWord = function (integer) {
 	return randomWord;
 }
 
-var createArray = function (numWords, createRandomWord) {
+var createArray = function (numWords) {
 	var results = [];
 
 	for (var i=0; i < numWords; i++) {
-		results.push(createRandomWord);
+		results.push(createRandomWord());
 	}
 	return results;
 }
 
-var newData = createArray;
-console.log(newData);
+var generateData = function (numArrays) {
+	for (var i=0; i < numArrays; i++) {
+		var a = createArray(3);
+		console.log(a);
+		var b = returnLongest(a);
+	};
+}
 
-
-
-// var text = "Hello" + " " + "World!";
-// var text = "Hello".concat(" ", "World!");
-
-
-// Write a function that takes an integer for length, and builds and returns an array of strings of the
-// given length. So if we ran your function with an argument of 3, we would get an array of 3 random
-// words back (the words don't have to be actual sensical English words -- "nnnnfph" totally counts).
-// The words should be of randomly varying length, with a minimum of 1 letter and a maximum of 10 letters.
-
-
-
-
-
-
-
-
-
-
-
-
-
+generateData(10);
 
 
