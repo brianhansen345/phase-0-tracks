@@ -114,15 +114,71 @@ var compareArraysForMatchingIndices = function(array1, array2) {
 	};
 }
 
+// DRIVER CODE
+
 var a = compareArraysForMatchingIndices(keyMatches, valueMatches);
 console.log(a);
 // RETURNS TRUE BECAUSE THERE IS AT LEAST ONE MATCH
 
-// DRIVER CODE
 
 // phrases = ["long phrase", "longest phrase", "longer phrase"]
 // returnLongest(phrases);
 
 // var cars = ["Taurus", "Lamborghini", "Prius", "Kia"]
 // returnLongest(cars);
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+alphabet = "abcdefghijklmnopqrstuvqxyz"
+
+var createRandomWord = function (integer) {
+	var integer = (getRandomInt(1, 12));
+	var randomWord = "";
+
+	for (var i=0; i < integer; i++) {
+		randomWord = randomWord.concat(alphabet.charAt(getRandomInt(1, 27)));
+	};
+	return randomWord;
+}
+
+var createArray = function (numWords, createRandomWord) {
+	var results = [];
+
+	for (var i=0; i < numWords; i++) {
+		results.push(createRandomWord);
+	}
+	return results;
+}
+
+var newData = createArray;
+console.log(newData);
+
+
+
+// var text = "Hello" + " " + "World!";
+// var text = "Hello".concat(" ", "World!");
+
+
+// Write a function that takes an integer for length, and builds and returns an array of strings of the
+// given length. So if we ran your function with an argument of 3, we would get an array of 3 random
+// words back (the words don't have to be actual sensical English words -- "nnnnfph" totally counts).
+// The words should be of randomly varying length, with a minimum of 1 letter and a maximum of 10 letters.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
