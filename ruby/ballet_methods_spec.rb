@@ -38,4 +38,13 @@ describe Dancer do
     expect(dancer.card).to eq ["Anna Pavlova"]
   end
 
+  it "prohibits adding more than five dance partners" do
+    dancer.queue_dance_with("Mikhail Baryshnikov")
+    dancer.queue_dance_with("Anna Pavlova")
+    dancer.queue_dance_with("Jimbo")
+    dancer.queue_dance_with("Bartholomew")
+    dancer.queue_dance_with("Poopface")
+    expect(dancer.queue_dance_with("Cassandra")).to eq false
+  end
+
 end
