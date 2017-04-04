@@ -1,0 +1,29 @@
+sqlite> SELECT * FROM dogs
+   ...> ;
+1|Nala|5|true|1
+2|Jimbo|10|false|2
+3|James|3|true|1
+sqlite>
+
+
+sqlite> UPDATE dogs SET spayed_neutered="true" WHERE team_id=2;
+sqlite> SELECT * FROM dogs
+   ...> ;
+1|Nala|5|true|1
+2|Jimbo|10|true|2
+3|James|3|true|1
+
+sqlite> SELECT dogs.name, dogs.age, dogs.spayed_neutered, sled_teams.name FROM dogs JOIN sled_teams ON dogs.team_id = sled_teams.id;
+Nala|5|true|The Iron Dogs
+Jimbo|10|true|Marquette
+James|3|true|The Iron Dogs
+sqlite> 
+
+
+sqlite> SELECT dogs.name, dogs.age FROM dogs;
+Nala|5
+Jimbo|10
+James|3
+
+
+sqlite> DELETE from dogs WHERE age=3;
