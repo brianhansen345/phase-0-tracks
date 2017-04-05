@@ -29,6 +29,7 @@ def create_lift(db, name, weight, sets, reps, rest_between_sets, able_to_complet
 end
 
 # USER INTERFACE
+
 action = ""
 until action == "quit"
 	puts "What would you like to do? Select: 'add a lift', 'view past lifts', or 'quit'"
@@ -57,7 +58,7 @@ until action == "quit"
 	  		weight', or 'quit'"
 		input2 = gets.chomp.downcase
 		if input2 == "view lifts from a certain date"
-			puts "Enter the date as 8 digit number (ie 'yearmonthday'"
+			puts "Enter the date as 8 digit number (ie 'yearmonthday')"
 			date = gets.chomp.to_i
 			lifts = db.execute("SELECT * FROM lifts WHERE lift_date=#{date}")
 			lifts.each do |lift|
@@ -72,41 +73,15 @@ until action == "quit"
 				puts "#{lift[8]}: #{lift[1]} attempt at #{lift[2]} lbs (#{lift[3]} sets/#{lift[4]} 
 	  			reps/#{lift[5]} mins rest: #{lift[6]}. Next attempt at #{lift[7]}."
 	  		end
+	  	elsif input2 == "quit"
+	  		break
 		else
-			break
+			p "Does not compute"
 		end
+	elsif action == "quit"
+		break
 	else
-		"Does not compute."
+		p "Does not compute."
 	end
 end
-
-
-
-
-
-
-	# 	db.execute("INSERT INTO lifts (name, weight, sets, reps, rest_between_sets, able_to_complete, 
-	# next_weight, lift_date) VALUES ('squat', 185, 1, 5, 0, 'true', 190, 20170404)")
-
-
-
-
-
-
-
-
-# lifts = db.execute("SELECT * FROM lifts")
-# lifts.each do |lift|
-# 	puts "#{lift[8]}: #{lift[1]} attempt at #{lift[2]} lbs (#{lift[3]} sets/#{lift[4]} reps/#{lift[5]} 
-# 	mins rest: #{lift[6]}. Next attempt at #{lift[7]}."
-# end
-
-
-
-# 
-# lifts.each do |lift|
-# 	puts "#{lift[8]}: #{lift[1]} attempt at #{lift[2]} lbs (#{lift[3]} sets/#{lift[4]} reps/#{lift[5]}
-# 	mins rest): #{lift[6]}. Next attempt at #{lift[7]}."
-# end
-
 
