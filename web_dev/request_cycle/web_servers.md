@@ -11,7 +11,7 @@ Make Every Program a Filter
 
 In your own words, what is a VPS (virtual private server)? What, according to your research, are the advantages of using a VPS?
 
-Somewhat similar to an instance of a class in Ruby, a VPS is an instance (copy) of an operating system. Advantages include being able to be created and configured much more easily than a dedicated physical server and are priced much lower.
+In a somewhat similar vein as an instance of a class in Ruby, a VPS is an instance (copy) of an operating system. Advantages include being able to be created and configured much more easily than a dedicated physical server and are priced much lower.
 
 Optional bonus question: Why is it considered a bad idea to run programs as the root user on a Linux system?
 
