@@ -1,0 +1,3 @@
+I'm going to spend one and a half hours studying jQuery on codeacademy.com and a half hour studying jQuery on khanacademy.org (in order to get exposed to different resources).
+
+Both these resources incorporate quizzing at regular intervals, so they will take care of that for me. Breaks are important because they give your mind a chance to rest and also to solidify the knowledge that you just acquired.
