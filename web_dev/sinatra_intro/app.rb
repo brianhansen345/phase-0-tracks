@@ -60,6 +60,9 @@ get '/great_job' do
   end
 end
 
+# get '/:person_1/loves/:person_2' do
 
-
-
+get '/:number_1/plus/:number_2' do
+  sum = params[:number_1].to_i + params[:number_2].to_i
+  "#{sum}"
+end
